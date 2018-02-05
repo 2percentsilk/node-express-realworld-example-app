@@ -17,8 +17,6 @@ To get the Node server running locally:
 - Run `npm run mongo:start` to spin up the local MongoDB database
 - `npm run dev` to start the local server
 
-Alternately, to quickly try out this repo in the cloud, you can [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/remix/realworld)
-
 # Code Overview
 
 ## Dependencies

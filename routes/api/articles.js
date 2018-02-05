@@ -194,18 +194,15 @@ router.delete('/:article', auth.required, function(req, res, next) {
 });
 
 // Favorite an article
-router.post('/:article/favorite', auth.required, function(req, res, next) {
-  var articleId = req.article._id;
+router.post('/:article/favorite', auth.required, async (req, res, next) => {
+  const articleId = req.article._id;
+  const userId = req.payload.id;
 
-  User.findById(req.payload.id).then(function(user){
-    if (!user) { return res.sendStatus(401); }
+  const user = await User.findById(userId);
+  await user.favorite(articleId);
 
-    return user.favorite(articleId).then(function(){
-      return req.article.updateFavoriteCount().then(function(article){
-        return res.json({article: article.toJSONFor(user)});
-      });
-    });
-  }).catch(next);
+  const article = await req.article.updateFavoriteCount();
+  return res.json({ article: article.toJSONFor(user) });
 });
 
 // Unfavorite an article

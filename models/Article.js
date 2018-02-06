@@ -28,7 +28,7 @@ ArticleSchema.methods.slugify = function() {
   this.slug = slug(this.title) + '-' + (Math.random() * Math.pow(36, 6) | 0).toString(36);
 };
 
-ArticleSchema.methods.updateFavoriteCount = async () => {
+ArticleSchema.methods.updateFavoriteCount = async function () {
   this.favoritesCount = await User.count({
     favorites: { $in: [this._id] }
   });

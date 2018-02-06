@@ -10,12 +10,12 @@ This repo is functionality complete — PRs and issues welcome!
 
 # Getting started
 
-To get the Node server running locally:
-
 - Clone this repo
-- `npm install` to install all required dependencies
+- CD into the cloned directory
+- Run `npm install` to install all required dependencies
 - Run `npm run mongo:start` to spin up the local MongoDB database
-- `npm run dev` to start the local server
+- Run `npm run dev` to start the web server
+- Open `http://localhost:3000` in a browser
 
 # Code Overview
 

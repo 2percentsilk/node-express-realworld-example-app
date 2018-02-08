@@ -6,7 +6,10 @@
             "request": "launch",
             "name": "Launch (Nodemon)",
             "runtimeExecutable": "${workspaceFolder}/node_modules/nodemon/bin/nodemon.js",
-            "restart": true
+            "restart": true,
+            "skipFiles": [
+                "<node_internals>/**/*.js"
+            ]
         }
     ]
 }

@@ -198,9 +198,9 @@ router.post('/:article/favorite', auth.required, async (req, res, next) => {
   const articleId = req.article._id;
   const userId = req.payload.id;
 
-  const user = await User.findById(userId);
+  var user = await User.findById(userId);
   await user.favorite(articleId);
-
+  
   const article = await req.article.updateFavoriteCount();
   return res.json({ article: article.toJSONFor(user) });
 });

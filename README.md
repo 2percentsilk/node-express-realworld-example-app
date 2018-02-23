@@ -17,6 +17,11 @@ This repo is functionality complete — PRs and issues welcome!
 - Run `npm run dev` to start the web server
 - Open `http://localhost:3000` in a browser
 
+# Debugging
+
+- Install Nodemon via `npm install -g nodemon`
+- Open this project in VS Code and press `F5`
+
 # Code Overview
 
 ## Dependencies

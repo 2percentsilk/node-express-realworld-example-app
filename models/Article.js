@@ -28,7 +28,7 @@ schema.methods.slugify = function () {
   this.slug = slug(this.title) + '-' + (Math.random() * Math.pow(36, 6) | 0).toString(36);
 };
 
-schema.methods.updateFavoriteCount = async function () {
+schema.methods.updateFavoriteCount = async () => {
   this.favoritesCount = await User.count({
     favorites: { $in: [this._id] }
   });

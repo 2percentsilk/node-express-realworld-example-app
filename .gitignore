@@ -2,7 +2,10 @@
 logs
 *.log
 .DS_Store
-
+bin
+obj
+.vs
+package-lock.json
 npm-debug.log*
 
 # Runtime data

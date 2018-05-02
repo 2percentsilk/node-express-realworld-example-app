@@ -9,7 +9,11 @@
             "restart": true,
             "skipFiles": [
                 "<node_internals>/**/*.js"
-            ]
+            ],
+            "env": {
+                "NODE_ENV": "debug"
+            },
+            "console": "integratedTerminal"
         }
     ]
 }
